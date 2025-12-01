@@ -1,0 +1,144 @@
+.table-container {
+  max-width: 80%;
+  width: 100%;
+  margin: 80px auto 40px auto; /* reduced top/bottom for better scaling */
+  padding: 1px;
+  background-color: #f9fafb;
+  border-radius: 1px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  overflow-x: auto; /* ensures no content cuts off */
+}
+
+.table-title {
+  font-size: clamp(18px, 2vw, 24px); /* scales dynamically */
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+  justify-content: center;
+}
+
+.filters input,
+.filters select {
+  padding: 10px 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  flex: 1 1 180px;
+  min-width: 140px;
+  max-width: 250px;
+  font-size: clamp(12px, 1.5vw, 16px);
+}
+
+/* Table wrapper to handle overflow on zoom/smaller screens */
+.table-wrapper {
+  overflow-x: auto;
+  overflow-y: auto; /* Adds vertical scrollbar */
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+.table-wrapper thead th {
+  position: sticky;
+  top: 0;
+  background-color: #1e40af; /* same as your header background */
+  color: white;
+  z-index: 2;
+  text-align: left;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: clamp(12px, 1.4vw, 16px);
+}
+
+thead {
+  background-color: #1e40af;
+  color: white;
+}
+
+th, td {
+  padding: 12px 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap;
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  background-color: #1e40af;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: clamp(12px, 1.4vw, 16px);
+}
+
+.pagination button:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #2563eb;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .table-container {
+    max-width: 95%;
+    padding: 15px;
+  }
+
+  th, td {
+    padding: 10px 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  th, td {
+    padding: 8px 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .table-container {
+    padding: 10px;
+  }
+
+  .pagination button {
+    flex: 1 1 auto;
+    min-width: 80px;
+  }
+
+  .table-title {
+    font-size: 18px;
+  }
+}

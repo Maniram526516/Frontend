@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dealers>
+  <dealer code="1001">
+    <name>Global Auto</name>
+    <version>v2025.1</version>
+    <patch>2025-09-12</patch>
+    <country>India</country>
+    <namespaces>
+      <namespace>
+        <name>Namespace 1</name>
+        <companies>
+          <company>
+            <name>Company A</name>
+            <status>Active</status>
+            <lastSync>2025-09-20</lastSync>
+          </company>
+          <company>
+            <name>Company B</name>
+            <status>Inactive</status>
+            <lastSync>2025-09-18</lastSync>
+          </company>
+        </companies>
+      </namespace>
+      <namespace>
+        <name>Namespace 2</name>
+        <companies>
+          <company>
+            <name>Company X</name>
+            <status>Active</status>
+            <lastSync>2025-09-19</lastSync>
+          </company>
+        </companies>
+      </namespace>
+    </namespaces>
+  </dealer>
+  <dealer code="1002">
+    <name>Fast Motors</name>
+    <version>v2025.0</version>
+    <patch>2025-09-08</patch>
+    <country>Germany</country>
+    <namespaces>
+      <namespace>
+        <name>Namespace 1</name>
+        <companies>
+          <company>
+            <name>Company M</name>
+            <status>Active</status>
+            <lastSync>2025-09-15</lastSync>
+          </company>
+        </companies>
+      </namespace>
+    </namespaces>
+  </dealer>
+</dealers>
